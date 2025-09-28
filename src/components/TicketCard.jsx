@@ -7,7 +7,8 @@ export default function TicketCard({ ticket, onSelect }) {
         <h4>{ticket.title}</h4>
         <span className={`status ${ticket.status}`}>{ticket.status}</span>
       </div>
-      <p className="ticket-desc">{ticket.description}</p> {/* Remove slice to show full description */}
+      <p className="ticket-id">Ticket ID: #{ticket.id}</p> {/* Add this line */}
+      <p className="ticket-desc">{ticket.description}</p>
       <div className="ticket-footer">
         <span className={`priority ${ticket.priority}`}>{ticket.priority.toUpperCase()} PRIORITY</span>
         <span>{ticket.name}</span>

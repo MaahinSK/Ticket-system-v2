@@ -54,3 +54,10 @@
   padding: 2px 8px;
   border-radius: 6px;
 }
+
+.ticket-id {
+  font-size: 12px;
+  color: #666;
+  margin: 4px 0;
+  font-weight: bold;
+}
