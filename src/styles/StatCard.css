@@ -1,0 +1,40 @@
+.stat-card {
+  flex: 1;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.stat-content {
+  display: flex;
+  justify-content: left;
+  padding-left: 150px;
+  width: 100%;
+  align-items: center;
+}
+
+.stat-card h3 {
+  font-size: 16px;
+}
+
+.stat-card p {
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.stat-img {
+  width: 200px;
+  opacity: 1;
+  align-items: left;
+}
+
+.purple-gradient {
+  background: linear-gradient(to right, #7c3aed, #3ed2ff);
+}
+
+.green-gradient {
+  background: linear-gradient(to right, #10b981, #2d3fe6);
+}
