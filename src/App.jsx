@@ -4,14 +4,14 @@ import StatCard from "./components/StatCard";
 import TicketCard from "./components/TicketCard";
 import TaskStatus from "./components/TaskStatus";
 import ResolvedTask from "./components/ResolvedTask";
-import Footer from "./components/Footer"; // Add this import
+import Footer from "./components/Footer"; 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./styles/App.css";
 
 function App() {
   const [tickets, setTickets] = useState([]);
-  const [selectedTask, setSelectedTask] = useState(null);
+  
   const [resolvedTasks, setResolvedTasks] = useState([]);
 
   useEffect(() => {
@@ -26,14 +26,12 @@ function App() {
         t.id === ticket.id ? { ...t, status: "in-progress" } : t
       )
     );
-    setSelectedTask(ticket);
     toast.info(`${ticket.title} moved to In-progress`);
   };
 
   const handleComplete = (task) => {
     setResolvedTasks([...resolvedTasks, { ...task, status: "resolved" }]);
     setTickets((prev) => prev.filter((t) => t.id !== task.id));
-    setSelectedTask(null);
     toast.success(`${task.title} marked as resolved`);
   };
 
@@ -62,7 +60,7 @@ function App() {
         </div>
       </div>
 
-      <Footer /> {/* Add the Footer here */}
+      <Footer /> 
       <ToastContainer position="top-right" />
     </div>
   );

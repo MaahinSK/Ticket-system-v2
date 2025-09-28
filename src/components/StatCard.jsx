@@ -10,7 +10,6 @@ export default function StatCard({ title, count, gradient, img }) {
           <h3>{title}</h3>
           <p>{count}</p>
         </div>
-        {/* {img && <img src={vectorImage} alt="vector" className="stat-img" />} */}
       </div>
     </div>
   );
